@@ -6,7 +6,7 @@
 /*   By: yublee <yublee@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:52:06 by yublee            #+#    #+#             */
-/*   Updated: 2023/11/20 17:45:47 by yublee           ###   ########.fr       */
+/*   Updated: 2023/12/04 19:13:31 by yublee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,10 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	len;
 
 	len = ft_strlen(s);
-	while (len >= 0)
+	while (len--)
 	{
 		if (*(s + len) == (char)c)
 			return ((char *)s + len);
-		if (len == 0)
-			break ;
-		len--;
 	}
 	return (NULL);
 }

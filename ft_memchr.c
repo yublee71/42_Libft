@@ -6,7 +6,7 @@
 /*   By: yublee <yublee@student.42london.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:49:00 by yublee            #+#    #+#             */
-/*   Updated: 2023/11/16 18:32:06 by yublee           ###   ########.fr       */
+/*   Updated: 2023/12/04 19:17:47 by yublee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return (&((void *)s)[i]);
+			return ((void *)s + i);
 		i++;
 	}
 	return (NULL);
